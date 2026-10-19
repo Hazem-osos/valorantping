@@ -1,0 +1,33 @@
+appId: com.riyadhping.optimizer
+productName: Riyadh Ping Optimizer
+copyright: Copyright © Riyadh Ping Optimizer
+directories:
+  output: dist
+  buildResources: build
+files:
+  - out/**/*
+  - package.json
+asar: true
+forceCodeSigning: false
+win:
+  defaultArch: x64
+  target:
+    - nsis
+  requestedExecutionLevel: asInvoker
+  signAndEditExecutable: false
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: always
+  createStartMenuShortcut: true
+  shortcutName: Riyadh Ping Optimizer
+  uninstallDisplayName: Riyadh Ping Optimizer
+  artifactName: Riyadh-Ping-Optimizer-Setup.exe
+  deleteAppDataOnUninstall: false
+mac:
+  target:
+    - dir
+linux:
+  target:
+    - dir
